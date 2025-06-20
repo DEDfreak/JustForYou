@@ -1,0 +1,2620 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+.prettierignore
+.prettierrc
+index.html
+jsconfig.json
+package.json
+postcss.config.js
+public/images/img_message.svg
+public/images/img_phone.svg
+public/images/img_vector_1.svg
+README.md
+src/App.jsx
+src/components/common/Footer.css
+src/components/common/Footer.jsx
+src/components/common/Header.jsx
+src/components/common/HeroSection.css
+src/components/common/HeroSection.jsx
+src/components/ui/Button.jsx
+src/components/ui/card.tsx
+src/lib/utils.ts
+src/main.jsx
+src/pages/Admin/Admin.jsx
+src/pages/Admin/index.jsx
+src/pages/Home/HomePage.css
+src/pages/Home/index.jsx
+src/pages/jewelry-design-studio-homepage/components/AboutSection.jsx
+src/pages/jewelry-design-studio-homepage/components/ContactSection.jsx
+src/pages/jewelry-design-studio-homepage/components/GallerySection.jsx
+src/pages/jewelry-design-studio-homepage/components/ServicesSection.jsx
+src/pages/jewelry-design-studio-homepage/components/TestimonialsSection.jsx
+src/pages/jewelry-design-studio-homepage/index.jsx
+src/pages/ProductDetail/index.jsx
+src/pages/ProductDetail/ProductDetail.jsx
+src/pages/ProductListing/index.jsx
+src/pages/ProductListing/ProductListing.jsx
+src/Routes.jsx
+src/styles/header.css
+src/styles/index.css
+src/styles/tailwind.css
+tailwind.config.js
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# Node modules
+node_modules/
+package-lock.json
+
+# Production build
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.DS_Store
+Thumbs.db
+
+# Optional: if using TypeScript
+*.tsbuildinfo
+
+# Optional: if using testing tools
+coverage/
+jest-test-results.json
+
+# Optional: if using IDEs
+.vscode/
+.idea/
+</file>
+
+<file path=".prettierignore">
+# .prettierignore
+build
+coverage
+node_modules
+public
+</file>
+
+<file path=".prettierrc">
+{
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "jsxBracketSameLine": false,
+  "endOfLine": "auto"
+}
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A React application built with Vite and TailwindCSS" />
+  <meta name="theme-color" content="#646cff" />
+  <meta name="robots" content="index, follow" />
+  <title>JustForYouJewels</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <!-- <script id="dhws-errorTracker" src="/dhws-error-tracker.js"></script>
+  <script id="dhws-elementInspector" src="/dhws-web-inspector.js"></script> -->
+</body>
+
+</html>
+</file>
+
+<file path="jsconfig.json">
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
+</file>
+
+<file path="package.json">
+{
+  "name": "murarkarishit_s_application",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,md,json}\""
+  },
+  "dependencies": {
+    "@dhiwise/component-tagger": "^1.0.3",
+    "@tailwindcss/typography": "^0.5.16",
+    "clsx": "^2.1.1",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.1",
+    "tailwind-merge": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "4.3.4",
+    "autoprefixer": "^10.4.21",
+    "globals": "^15.15.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.2.0"
+  }
+}
+</file>
+
+<file path="postcss.config.js">
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+</file>
+
+<file path="public/images/img_message.svg">
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.49524C9.73557 5.49524 6.65128 5.69082 4.69268 5.83463C4.04222 5.88239 3.53846 6.40115 3.53846 7.03476V7.75076L11.3774 11.899C11.7646 12.104 12.2354 12.104 12.6226 11.899L20.4615 7.75076V7.03476C20.4615 6.40115 19.9578 5.88239 19.3073 5.83463C17.3487 5.69082 14.2644 5.49524 12 5.49524ZM20.4615 9.42718L13.3698 13.1801C12.5179 13.6309 11.4821 13.6309 10.6302 13.1801L3.53846 9.42718V17.1448C3.53846 17.7784 4.04222 18.2971 4.69268 18.3449C6.65128 18.4887 9.73557 18.6843 12 18.6843C14.2644 18.6843 17.3487 18.4887 19.3073 18.3449C19.9578 18.2971 20.4615 17.7784 20.4615 17.1448V9.42718ZM4.57444 4.37351C6.53421 4.22961 9.67068 4.02979 12 4.02979C14.3293 4.02979 17.4658 4.22961 19.4256 4.37351C20.8902 4.48105 22 5.64771 22 7.03476V17.1448C22 18.5318 20.8902 19.6985 19.4256 19.806C17.4658 19.9499 14.3293 20.1498 12 20.1498C9.67068 20.1498 6.53421 19.9499 4.57444 19.806C3.10982 19.6985 2 18.5318 2 17.1448V7.03476C2 5.64771 3.10982 4.48105 4.57444 4.37351Z" fill="#030D45"/>
+</svg>
+</file>
+
+<file path="public/images/img_phone.svg">
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.56513C10.4751 3.56513 8.42753 3.73375 6.99542 3.87367C6.40117 3.93173 5.93741 4.40603 5.89141 5.00733C5.749 6.8688 5.54839 9.88654 5.54839 12.0901C5.54839 14.2937 5.749 17.3114 5.89141 19.1729C5.93741 19.7742 6.40117 20.2485 6.99542 20.3066C8.42753 20.4465 10.4751 20.6151 12 20.6151C13.5249 20.6151 15.5725 20.4465 17.0046 20.3066C17.5988 20.2485 18.0626 19.7742 18.1086 19.1729C18.251 17.3114 18.4516 14.2937 18.4516 12.0901C18.4516 9.88654 18.251 6.8688 18.1086 5.00733C18.0626 4.40603 17.5988 3.93173 17.0046 3.87367C15.5725 3.73375 13.5249 3.56513 12 3.56513ZM6.84502 2.331C8.28091 2.19071 10.3935 2.01514 12 2.01514C13.6065 2.01514 15.7191 2.19071 17.155 2.331C18.5029 2.46269 19.5495 3.54255 19.6525 4.88898C19.7949 6.7511 20 9.82137 20 12.0901C20 14.3589 19.7949 17.4291 19.6525 19.2913C19.5495 20.6377 18.5029 21.7175 17.155 21.8492C15.7191 21.9895 13.6065 22.1651 12 22.1651C10.3935 22.1651 8.28091 21.9895 6.84502 21.8492C5.49709 21.7175 4.45055 20.6377 4.34754 19.2913C4.20508 17.4291 4 14.3589 4 12.0901C4 9.82137 4.20508 6.7511 4.34754 4.88898C4.45055 3.54255 5.49709 2.46269 6.84502 2.331Z" fill="#030D45"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1935 17.2568C10.1935 16.8288 10.5402 16.4818 10.9677 16.4818H13.0323C13.4598 16.4818 13.8065 16.8288 13.8065 17.2568C13.8065 17.6848 13.4598 18.0318 13.0323 18.0318H10.9677C10.5402 18.0318 10.1935 17.6848 10.1935 17.2568Z" fill="#030D45"/>
+<path d="M13.0323 6.92346C13.0323 7.49415 12.5701 7.95679 12 7.95679C11.4299 7.95679 10.9677 7.49415 10.9677 6.92346C10.9677 6.35277 11.4299 5.89013 12 5.89013C12.5701 5.89013 13.0323 6.35277 13.0323 6.92346Z" fill="#030D45"/>
+</svg>
+</file>
+
+<file path="public/images/img_vector_1.svg">
+<svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 8.46829H20.1681M20.1681 8.46829L9.57985 0.401048M20.1681 8.46829L9.57985 16.5355" stroke="#2B2024"/>
+</svg>
+</file>
+
+<file path="README.md">
+# React + Vite + Tailwind CSS Project
+
+A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+
+## 🚀 Features
+
+- **React 19** - React version with improved rendering and concurrent features
+- **Vite** - Lightning-fast build tool and development server
+- **TailwindCSS** - Utility-first CSS framework with extensive customization
+- **React Router** - Declarative routing for React applications
+
+## 📋 Prerequisites
+
+- Node.js (v14.x or higher)
+- npm or yarn
+
+
+## 🛠️ Installation
+
+1. Install dependencies:
+  ```bash
+  npm install
+  # or
+  yarn install
+  ```
+
+2. Start the server:
+  ```bash
+  npm run start
+  # or
+  yarn start
+  ```
+
+## 📁 Project Structure
+
+```
+/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Page components
+│   ├── styles/          # Global styles and Tailwind configuration
+│   ├── App.jsx          # Main application component
+│   ├── main.jsx         # Application entry point
+│   └── Routes.jsx       # Application routes
+├── index.html           # HTML template
+├── package.json         # Project dependencies and scripts
+├── postcss.config.js    # PostCSS configuration for Tailwind
+├── tailwind.config.js   # Tailwind CSS configuration
+├── vite.config.js       # Vite configuration
+```
+
+## 🧩 Adding Routes
+
+To add new routes to the application, update the `Routes.jsx` file:
+
+```jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import page components
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+
+const AppRoutes = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default AppRoutes;
+```
+
+## 🎨 Styling
+
+This project uses Tailwind CSS for styling. The configuration includes:
+
+- Utility-first approach for rapid development
+- Custom theme configuration
+- Responsive design utilities
+- PostCSS and Autoprefixer integration
+
+## 📦 Deployment
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+## 🙏 Acknowledgments
+
+- Built with [Rocket.new](https://rocket.new)
+- Powered by React and Vite
+- Styled with Tailwind CSS
+
+Built with ❤️ on Rocket.new
+</file>
+
+<file path="src/App.jsx">
+import Routes from './Routes';
+
+function App() {
+  return (
+        <Routes />
+  );
+}
+
+export default App;
+</file>
+
+<file path="src/components/common/Footer.css">
+/* src/components/common/Footer.css */
+.footer-main {
+    @apply bg-[#faf7f0] pt-10 md:pt-[60px] pb-8 md:pb-[40px];
+  }
+  
+  .footer-container {
+    @apply max-w-[1440px] mx-auto px-6 sm:px-10 md:px-[60px];
+  }
+  
+  .footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16 lg:gap-[100px] mb-10 md:mb-[40px];
+  }
+  
+  .footer-section {
+    @apply text-center md:text-center;
+  }
+  
+  .footer-heading {
+    @apply text-2xl md:text-[31px] font-bold leading-snug md:leading-[42px] text-[#2B3C48] font-['Playfair_Display'] mb-4 md:mb-[18px];
+  }
+  
+  .footer-text {
+    @apply text-base md:text-[18px] font-normal leading-relaxed md:leading-[30px] text-[#2b2024bf] font-heebo max-w-full md:max-w-[405px] mx-auto md:mx-0;
+  }
+  
+  .footer-links-container {
+    @apply space-y-4 md:space-y-[36px];
+  }
+  
+  .footer-link {
+    @apply block text-base md:text-[18px] font-normal leading-normal md:leading-[27px] text-[#2b2024] font-heebo hover:text-[#d4af37] transition-colors;
+  }
+  
+  .footer-support-items {
+    @apply space-y-6 md:space-y-[32px];
+  }
+  
+  .footer-support-item {
+    @apply flex items-center justify-center md:justify-center space-x-4 md:space-x-[29px];
+  }
+  
+  .footer-support-icon {
+    @apply w-[24px] h-[24px];
+  }
+  
+  .footer-support-text {
+    @apply text-base md:text-[18px] font-normal leading-normal md:leading-[27px] text-[#2b2024] font-heebo;
+  }
+  .footer-support-text-lato { /* For phone number specifically if needed */
+    @apply text-base md:text-[18px] font-normal leading-normal md:leading-[22px] text-[#2b2024] font-lato;
+  }
+  
+  
+  .footer-social-icons {
+    @apply flex items-center justify-center md:justify-center space-x-6 md:space-x-[40px];
+  }
+  
+  .footer-social-icon {
+    @apply w-[20px] h-[20px] cursor-pointer hover:opacity-80;
+  }
+</file>
+
+<file path="src/components/common/Footer.jsx">
+import React from 'react';
+import './Footer.css'; // Import the new CSS file
+
+const Footer = () => {
+  return (
+    <footer className="footer-main">
+      <div className="footer-container">
+        <div className="footer-grid">
+          {/* Naam Section */}
+          <div className="footer-section">
+            <h3 className="footer-heading">JustForYouJewels</h3>
+            <p className="footer-text">
+              At NaamNYC, we work with high-end designers (both new and established), retail stores, and also private clients looking for that perfect custom piece or engagement ring.
+            </p>
+          </div>
+
+          {/* About Us Section */}
+          <div className="footer-section">
+            <h3 className="footer-heading">About us</h3>
+            <div className="footer-links-container">
+              <a href="/services" className="footer-link">Services</a>
+              <a href="/gallery" className="footer-link">Gallery</a>
+              <a href="/about" className="footer-link">About us</a>
+            </div>
+          </div>
+
+          {/* Support Section */}
+          <div className="footer-section">
+            <h3 className="footer-heading">Support</h3>
+            <div className="footer-support-items">
+              <div className="footer-support-item">
+                <img src="/images/img_message.svg" alt="Email" className="footer-support-icon" />
+                <span className="footer-support-text">hello@naamnyc.com</span>
+              </div>
+              <div className="footer-support-item">
+                <img src="/images/img_phone.svg" alt="Phone" className="footer-support-icon" />
+                <span className="footer-support-text-lato">+12-345-6789</span>
+              </div>
+              <div className="footer-social-icons">
+                <img src="/images/img_twitter_1.png" alt="Twitter" className="footer-social-icon" />
+                <img src="/images/img_facebook_1.png" alt="Facebook" className="footer-social-icon" />
+                <img src="/images/img_instagram_1.png" alt="Instagram" className="footer-social-icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+</file>
+
+<file path="src/components/common/Header.jsx">
+// src/components/common/Header.jsx
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../../styles/header.css'; // Existing CSS import
+
+const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Basic SVG hamburger icon
+  const HamburgerIcon = () => (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+  );
+
+  // Basic SVG close icon
+  const CloseIcon = () => (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  );
+
+  return (
+    <header className="header-container">
+      <div className="header-content">
+        <div className="logo-container">
+          <div className="logo-image-image">
+            <Link to="/">
+              <img
+                src="/images/img_justforyoujewelslogo_3.png"
+                alt="JustForYou Jewels Logo"
+                className="logo-image"
+              />
+            </Link>
+          </div>          
+          <div className="logo-text-text">
+            <Link to="/">
+              <img
+                src="/images/CROPPEDjustforyoujewelsLOGO.png"
+                alt="JustForYou Jewels Logo"
+                className="logo-text"
+              />
+            </Link>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="right-section flex items-center space-x-10">
+          {/* Hamburger Button - visible on small screens */}
+          <button
+            className="mobile-menu-button"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle navigation"
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+          </button>
+
+          {/* Desktop Navigation */}
+          <nav className="navigation-menu">
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/products" className="nav-link">Products</Link>
+            <Link to="/gallery" className="nav-link">Gallery</Link>
+            <Link to="/about" className="nav-link">About us</Link>
+          </nav>
+
+          {/* Contact Button - hidden on small, shown on md+ */}
+          <div className="contact-button-wrapper hidden md:flex">
+            <span className="contact-button-text">Contact</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu - shown when isMobileMenuOpen is true */}
+      {isMobileMenuOpen && (
+        <nav className="mobile-nav-menu">
+          <Link to="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+          <Link to="/services" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+          <Link to="/gallery" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
+          <Link to="/about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>About us</Link>
+          <div className="contact-button-wrapper mt-4 mx-4 w-[calc(100%-2rem)]" onClick={() => setIsMobileMenuOpen(false)}>
+            <span className="contact-button-text">Contact</span>
+          </div>
+        </nav>
+      )}
+    </header>
+  );
+};
+
+export default Header;
+</file>
+
+<file path="src/components/common/HeroSection.css">
+/* src/components/common/HeroSection.css */
+.hero-section {
+    @apply bg-[#faf9f6] relative flex items-center py-16 md:py-0;
+    min-height: calc(100vh - 100px); /* Example: full viewport height minus header */
+  }
+  @screen md {
+    .hero-section {
+      @apply min-h-[800px];
+    }
+  }
+  
+  
+  .hero-container {
+    @apply max-w-[1440px] mx-auto w-full px-6 sm:px-10 md:px-[90px];
+  }
+  
+  .hero-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[100px] items-center;
+  }
+  
+  .hero-content-left {
+    @apply space-y-8 md:space-y-[40px] text-center lg:text-left;
+  }
+  
+  .hero-heading {
+    @apply text-4xl sm:text-5xl md:text-[64px] font-normal leading-tight md:leading-[76px] text-[#0b3c49] font-['Old_Standard_TT'] max-w-full lg:max-w-[555px] mx-auto lg:mx-0;
+  }
+  
+  .hero-actions {
+    @apply flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-[40px];
+  }
+  
+  .hero-contact-button {
+    /* Using Button component's own styling, additional wrapper styles if needed */
+    @apply w-full sm:w-auto;
+  }
+  
+  .hero-gallery-link {
+    @apply flex items-center space-x-[10px] cursor-pointer text-[#1c1c1c] hover:text-[#d4af37];
+  }
+  
+  .hero-gallery-text {
+    @apply text-[18px] font-normal leading-[23px] font-['Old_Standard_TT'];
+  }
+  
+  .hero-gallery-arrow {
+    @apply w-[20px] h-[16px];
+  }
+  
+  .hero-content-right {
+    @apply relative mt-10 lg:mt-0;
+    /* Ensure this container has some height on mobile if images are absolutely positioned within it, or let images define height */
+  }
+  @screen sm {
+      .hero-content-right {
+          min-height: 550px; /* Adjust based on image sizes */
+      }
+  }
+  
+  
+  .hero-image-main-wrapper {
+    @apply relative w-full max-w-[280px] sm:max-w-[351px] mx-auto lg:mx-0;
+  }
+  
+  .hero-image-main-border {
+    @apply absolute inset-0 border-2 border-[#b68341] rounded-[0px_100px_100px_0px] sm:rounded-[0px_176px_176px_0px] z-10;
+  }
+  
+  .hero-image-main {
+    @apply w-full h-[400px] sm:h-[536px] object-cover rounded-[0px_0px_100px_0px] sm:rounded-[0px_0px_175px_0px] relative z-20;
+  }
+  
+  .hero-image-secondary {
+    @apply absolute top-[150px] sm:top-[219px] w-[180px] sm:w-[233px] h-[250px] sm:h-[319px] object-cover rounded-[0px_80px_0px_0px] sm:rounded-[0px_116px_0px_0px] z-30;
+    right: 0; /* Default for mobile */
+  }
+  @screen sm {
+    .hero-image-secondary {
+      right: -20px; /* Slightly offset on small screens */
+    }
+  }
+  @screen lg {
+    .hero-image-secondary {
+      right: -76px; /* Original offset for large screens */
+    }
+  }
+</file>
+
+<file path="src/components/common/HeroSection.jsx">
+import React from 'react';
+import Button from '../ui/Button';
+import './HeroSection.css'; // Import the new CSS file
+
+const HeroSection = () => {
+  return (
+    <section className="hero-section">
+      <div className="hero-container">
+        <div className="hero-grid">
+          {/* Left Content */}
+          <div className="hero-content-left">
+            <h1 className="hero-heading">
+              Beautiful, masterful design never goes out of fashion.
+            </h1>
+            
+            <div className="hero-actions">
+              <Button 
+                variant="primary" 
+                className="bg-[#d4af37] text-[#1c1c1c] px-[47px] py-[8px] text-[18px] font-['Old_Standard_TT'] hero-contact-button"
+              >
+                Contact
+              </Button>
+              
+              <div className="hero-gallery-link">
+                <span className="hero-gallery-text">Gallery</span>
+                <img src="/images/img_vector_1.svg" alt="Arrow" className="hero-gallery-arrow" />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content - Images */}
+          <div className="hero-content-right">
+            <div className="hero-image-main-wrapper">
+              <div className="hero-image-main-border"></div>
+              <img
+                src="/images/img_pexelssaystraight2735970.png"
+                alt="Beautiful Jewelry Design"
+                className="hero-image-main"
+              />
+            </div>
+            
+            <img
+              src="/images/img_pexelsww2799862.png"
+              alt="Jewelry Crafting"
+              className="hero-image-secondary"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
+</file>
+
+<file path="src/components/ui/Button.jsx">
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Button = ({ 
+  children, 
+  onClick, 
+  variant = 'primary', 
+  size = 'medium', 
+  disabled = false, 
+  type = 'button',
+  className = '',
+  ...props 
+}) => {
+  const baseClasses = 'font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
+  
+  const variants = {
+    primary: 'bg-[#d4af37] text-[#1c1c1c] hover:bg-[#b68341] focus:ring-[#d4af37]',
+    secondary: 'bg-[#523c1e] text-[#faf7f0] hover:bg-[#3d2d17] focus:ring-[#523c1e]',
+    outline: 'border border-[#0b3c49] text-[#0b3c49] hover:bg-[#0b3c49] hover:text-white focus:ring-[#0b3c49]',
+    ghost: 'text-[#0b3c49] hover:bg-[#faf7f0] focus:ring-[#0b3c49]',
+  };
+
+  const sizes = {
+    small: 'px-3 py-1 text-sm',
+    medium: 'px-4 py-2 text-base',
+    large: 'px-6 py-3 text-lg',
+  };
+
+  const buttonClasses = `${baseClasses} ${variants[variant]} ${sizes[size]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`;
+
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={buttonClasses}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline', 'ghost']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  disabled: PropTypes.bool,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  className: PropTypes.string,
+};
+
+export default Button;
+</file>
+
+<file path="src/components/ui/card.tsx">
+import React from 'react';
+import { cn } from '../../lib/utils';
+
+const Card = React.forwardRef((props, ref) => {
+  const { className, ...rest } = props;
+  return (
+    <div
+      ref={ref}
+      className={cn('rounded-xl border bg-card text-card-foreground shadow', className)}
+      {...rest}
+    />
+  );
+});
+Card.displayName = 'Card';
+
+const CardHeader = React.forwardRef((props, ref) => {
+  const { className, ...rest } = props;
+  return (
+    <div
+      ref={ref}
+      className={cn('flex flex-col space-y-1.5 p-6', className)}
+      {...rest}
+    />
+  );
+});
+CardHeader.displayName = 'CardHeader';
+
+const CardTitle = React.forwardRef((props, ref) => {
+  const { className, ...rest } = props;
+  return (
+    <div
+      ref={ref}
+      className={cn('font-semibold leading-none tracking-tight', className)}
+      {...rest}
+    />
+  );
+});
+CardTitle.displayName = 'CardTitle';
+
+const CardDescription = React.forwardRef((props, ref) => {
+  const { className, ...rest } = props;
+  return (
+    <div
+      ref={ref}
+      className={cn('text-sm text-muted-foreground', className)}
+      {...rest}
+    />
+  );
+});
+CardDescription.displayName = 'CardDescription';
+
+const CardContent = React.forwardRef((props, ref) => {
+  const { className, ...rest } = props;
+  return (
+    <div
+      ref={ref}
+      className={cn('p-6 pt-0', className)}
+      {...rest}
+    />
+  );
+});
+CardContent.displayName = 'CardContent';
+
+const CardFooter = React.forwardRef((props, ref) => {
+  const { className, ...rest } = props;
+  return (
+    <div
+      ref={ref}
+      className={cn('flex items-center p-6 pt-0', className)}
+      {...rest}
+    />
+  );
+});
+CardFooter.displayName = 'CardFooter';
+
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};
+</file>
+
+<file path="src/lib/utils.ts">
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+</file>
+
+<file path="src/main.jsx">
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import '@styles/index.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+</file>
+
+<file path="src/pages/Admin/Admin.jsx">
+import React, { useState } from "react";
+import Header from "../../components/common/Header";
+import Button from "../../components/ui/Button";
+import { Card, CardContent } from "../../components/ui/card"; 
+
+const Admin = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    description: "",
+    price: "",
+    image: null,
+  });
+
+  const [previewUrl, setPreviewUrl] = useState("");
+
+  const handleImageChange = (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (file) {
+      setFormData({ ...formData, image: file });
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreviewUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
+  return (
+    <div className="bg-[#faf9f6] min-h-screen">
+      <Header showContactButton={false} />
+
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-[#2b2024] mb-8 font-['Old_Standard_TT']">
+          Admin Dashboard
+        </h1>
+
+        <Card className="max-w-2xl mx-auto">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-[#2b2024] mb-6 font-['Old_Standard_TT']">
+              Add New Product
+            </h2>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-[#2b2024] mb-2 font-['Heebo']" htmlFor="name">
+                  Product Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d4af37] font-['Heebo']"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-[#2b2024] mb-2 font-['Heebo']" htmlFor="description">
+                  Description
+                </label>
+                <textarea
+                  id="description"
+                  value={formData.description}
+                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                  className="w-full p-2 border border-gray-300 rounded h-32 focus:outline-none focus:ring-2 focus:ring-[#d4af37] font-['Heebo']"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-[#2b2024] mb-2 font-['Heebo']" htmlFor="price">
+                  Price
+                </label>
+                <input
+                  type="text"
+                  id="price"
+                  value={formData.price}
+                  onChange={(e) => setFormData({ ...formData, price: e.target.value })}
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d4af37] font-['Heebo']"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-[#2b2024] mb-2 font-['Heebo']" htmlFor="image">
+                  Product Image
+                </label>
+                <input
+                  type="file"
+                  id="image"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d4af37] font-['Heebo']"
+                  required
+                />
+                {previewUrl && (
+                  <div className="mt-4">
+                    <img
+                      src={previewUrl}
+                      alt="Preview"
+                      className="w-full max-w-md mx-auto h-64 object-cover rounded"
+                    />
+                  </div>
+                )}
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-[#d4af37] text-[#1c1c1c] hover:bg-[#c19d2c] text-lg py-4 font-['Old_Standard_TT']"
+              >
+                Add Product
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </main>
+    </div>
+  );
+};
+
+export default Admin;
+</file>
+
+<file path="src/pages/Admin/index.jsx">
+export { Admin } from "./Admin";
+</file>
+
+<file path="src/pages/Home/HomePage.css">
+/* src/pages/Home/HomePage.css */
+
+.home-page-container {
+    @apply min-h-screen bg-[#faf9f6];
+  }
+  
+  /* Generic Section Styling */
+  .home-section {
+    @apply py-12 md:py-[80px];
+  }
+  .home-section-dark-bg {
+    @apply bg-[#2b2024] relative; /* For lifestyle section */
+  }
+  
+  
+  .home-section-container {
+    @apply max-w-[1440px] mx-auto px-6 sm:px-10 md:px-[90px];
+  }
+  
+  .home-section-heading {
+    @apply text-3xl sm:text-4xl md:text-[50px] font-normal leading-tight md:leading-[62px] text-[#2b2024] font-['Old_Standard_TT'] mb-10 md:mb-[80px] text-center md:text-left;
+  }
+  .home-section-heading-center {
+    @apply text-3xl sm:text-4xl md:text-[50px] font-normal leading-tight md:leading-[61px] text-center text-[#2b2024] font-['Old_Standard_TT'] mb-10 md:mb-[60px] max-w-xs sm:max-w-sm md:max-w-[345px] mx-auto;
+  }
+  
+  
+  /* Service Item (applies to Custom Jewelry, Engagement Ring, etc.) */
+  .service-item-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[90px] items-center mb-16 md:mb-[120px];
+  }
+  /* For alternating image/text order */
+  .service-item-grid-reversed .service-image-container {
+      @apply md:order-2;
+  }
+  .service-item-grid-reversed .service-content-container {
+      @apply md:order-1;
+  }
+  
+  .service-image-container {
+    @apply bg-[#c4c4c4] w-full h-[300px] sm:h-[380px] md:h-[438px]; /* Responsive height */
+  }
+  .service-image {
+    @apply w-full h-full object-cover;
+  }
+  
+  .service-content-container {
+    @apply space-y-6 md:space-y-[30px] text-center md:text-left;
+  }
+  
+  .service-title {
+    @apply text-2xl sm:text-3xl md:text-[42px] font-bold leading-tight md:leading-[52px] text-[#2b2024] font-['Old_Standard_TT'];
+  }
+  
+  .service-description {
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[36px] text-[#2b202499] font-heebo max-w-full md:max-w-[597px] mx-auto md:mx-0;
+  }
+  .service-description-alt { /* For engagement ring text */
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[36px] text-[#2b202499] font-heebo max-w-full md:max-w-[634px] mx-auto md:mx-0;
+  }
+  
+  
+  .service-button {
+    /* Button component styles itself, this class is for positioning if needed */
+    @apply mx-auto md:mx-0 block md:inline-block;
+  }
+  
+  
+  /* Lifestyle Section */
+  .lifestyle-section-grid {
+    @apply grid grid-cols-1 md:grid-cols-2;
+  }
+  .lifestyle-image {
+    @apply w-full md:w-[601px] h-[300px] md:h-[483px] object-cover;
+  }
+  .lifestyle-content {
+    @apply px-6 py-10 md:px-[90px] md:py-[77px] space-y-6 md:space-y-[30px] text-center md:text-left;
+  }
+  .lifestyle-heading {
+    @apply text-3xl sm:text-4xl md:text-[44px] font-bold leading-tight md:leading-[54px] text-[#faf7f0] font-['Old_Standard_TT'] max-w-full md:max-w-[455px] mx-auto md:mx-0;
+  }
+  .lifestyle-text {
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[35px] text-[#faf7f0b2] font-heebo max-w-full md:max-w-[427px] mx-auto md:mx-0;
+  }
+  .lifestyle-button {
+    @apply mx-auto md:mx-0 block md:inline-block;
+  }
+  
+  /* Instagram Section */
+  .instagram-gallery-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[42px] mb-10 md:mb-[60px]; /* Simplified for mobile */
+  }
+  .instagram-image-large {
+    @apply w-full h-auto sm:h-[400px] md:h-[450px] object-cover cursor-pointer hover:opacity-80 transition-opacity;
+    @apply lg:col-span-1; /* Default for one column, can be overridden if it's a 2-col layout with one larger */
+  }
+  .instagram-image-small-container { /* Container for the two smaller images */
+    @apply space-y-3 sm:space-y-[11px];
+  }
+  .instagram-image-small {
+    @apply w-full h-auto max-h-[220px] object-cover cursor-pointer hover:opacity-80 transition-opacity;
+  }
+  /* For the 4-column desktop layout, you might need more specific classes or adjust the grid definition */
+  /* This simplified example assumes the two small images stack in one of the grid cells on sm+ */
+  /* If you want the original 1-2small-1 layout on large screens, it's more complex with grid column spans */
+  .instagram-gallery-grid.complex-layout {
+      @apply lg:grid-cols-4; /* Example if you want a 4-col layout for desktop */
+  }
+  .instagram-gallery-grid.complex-layout .instagram-image-large.first {
+      @apply lg:col-span-1; /* Or lg:col-span-2 if it was wider */
+  }
+  .instagram-gallery-grid.complex-layout .instagram-image-small-container {
+      @apply lg:col-span-1;
+  }
+  .instagram-gallery-grid.complex-layout .instagram-image-large.second {
+      @apply lg:col-span-1; /* Or lg:col-span-2 */
+  }
+  
+  
+  .instagram-button-container {
+    @apply text-center;
+  }
+  .instagram-social-icons-container {
+    @apply flex justify-center space-x-6 md:space-x-[40px] mt-8 md:mt-[40px];
+  }
+  .instagram-social-icon {
+    @apply w-[20px] h-[20px] cursor-pointer hover:opacity-80;
+  }
+  
+  /* About Us Section on Home Page */
+  .home-about-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[90px] items-start;
+  }
+  .home-about-content {
+    @apply space-y-8 md:space-y-[40px] text-center md:text-left;
+  }
+  .home-about-text-group {
+    @apply space-y-6 md:space-y-[30px];
+  }
+  .home-about-text {
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[35px] text-[#2b2024bf] font-heebo max-w-full md:max-w-[530px] mx-auto md:mx-0;
+  }
+  .home-about-image-container {
+    @apply bg-[#c4c4c4] w-full h-[400px] sm:h-[500px] md:h-[618px]; /* Responsive height */
+  }
+  .home-about-image {
+    @apply w-full h-full object-cover;
+  }
+  .home-about-button {
+    @apply mx-auto md:mx-0 block md:inline-block;
+  }
+  
+  /* Modal Styling */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4;
+  }
+  .modal-content {
+    @apply bg-white p-6 md:p-8 rounded-lg max-w-md w-full mx-auto;
+  }
+  .modal-heading {
+    @apply text-xl md:text-2xl font-bold mb-4 text-[#2b2024];
+  }
+  .modal-text {
+    @apply text-gray-600 mb-6 text-sm md:text-base;
+  }
+  .modal-actions {
+    @apply flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4;
+  }
+  .modal-actions .button-primary, .modal-actions .button-outline { /* Target Button component if its classes are known */
+      @apply w-full;
+  }
+</file>
+
+<file path="src/pages/Home/index.jsx">
+import React, { useState } from 'react';
+import Header from '../../components/common/Header';
+import Footer from '../../components/common/Footer';
+import HeroSection from '../../components/common/HeroSection';
+import Button from '../../components/ui/Button';
+import './HomePage.css'; // Import the new CSS file
+
+const HomePage = () => {
+  const [showDesignModal, setShowDesignModal] = useState(false);
+
+  const handleReadMore = (service) => {
+    alert(`Learn more about ${service}`);
+  };
+
+  const handleSendDesignIdea = () => {
+    setShowDesignModal(true);
+  };
+
+  const handleInstagramClick = () => {
+    window.open('https://instagram.com', '_blank');
+  };
+
+  const handleContactUs = () => {
+    alert('Thank you for your interest! We will contact you soon.');
+  };
+
+  return (
+    <div className="home-page-container">
+      <Header />
+      <HeroSection />
+      
+      {/* Our Services Section */}
+      <section className="home-section">
+        <div className="home-section-container">
+          <h2 className="home-section-heading">Our Services</h2>
+
+          {/* Custom Jewelry Service */}
+          <div className="service-item-grid">
+            <div className="service-image-container">
+              <img
+                src="/images/img_pexelsthegloriousstudio7541807.png"
+                alt="Custom Jewelry Design"
+                className="service-image"
+              />
+            </div>
+            <div className="service-content-container">
+              <h3 className="service-title">Custom Jewelry</h3>
+              <p className="service-description">
+                Our team specializes in designing and crafting complex custom jewelry in gold or platinum. Our 3D designers can work with even the most complex ideas and create a digital model for you to approve before committing to production.
+              </p>
+              <Button 
+                variant="secondary" 
+                onClick={() => handleReadMore('Custom Jewelry')}
+                className="px-[35px] py-[8px] text-[18px] font-['Old_Standard_TT'] service-button"
+              >
+                Read more
+              </Button>
+            </div>
+          </div>
+
+          {/* Engagement Ring Service */}
+          <div className="service-item-grid service-item-grid-reversed"> {/* Reversed order for desktop */}
+            <div className="service-image-container">
+              <img
+                src="/images/img_pexelssaystraight2735970_435x574.png"
+                alt="Engagement Ring Design"
+                className="service-image"
+              />
+            </div>
+            <div className="service-content-container">
+              <h3 className="service-title">Engagement Ring</h3>
+              <p className="service-description-alt">
+                Our team of 3d modelers and jewelers can create literally any ring you can imagine, including complex designs. We are opening up our services to private clients, so you can get a beautiful, designer quality engagement ring at an affordable price.
+              </p>
+              <Button 
+                variant="secondary" 
+                onClick={() => handleReadMore('Engagement Ring')}
+                className="px-[35px] py-[8px] text-[18px] font-['Old_Standard_TT'] service-button"
+              >
+                Read more
+              </Button>
+            </div>
+          </div>
+
+          {/* Jewelry Manufacturing Service */}
+          <div className="service-item-grid">
+            <div className="service-image-container">
+              <img
+                src="/images/img_rectangle_7.png"
+                alt="Jewelry Manufacturing"
+                className="service-image" // Re-using service-image class
+              />
+            </div>
+            <div className="service-content-container">
+              <h3 className="service-title">Jewelry Manufacturing</h3>
+              <p className="service-description">
+                We work with you to make sure your jewelry is produced exactly as your specify and with impeccable standards. We can manufacture a unique collection for your store, or even work with custom orders for your customers.
+              </p>
+              <Button 
+                variant="secondary" 
+                onClick={() => handleReadMore('Jewelry Manufacturing')}
+                className="px-[35px] py-[8px] text-[18px] font-['Old_Standard_TT'] service-button"
+              >
+                Read more
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lifestyle Section */}
+      <section className="home-section home-section-dark-bg">
+        <div className="max-w-[1440px] mx-auto"> {/* This section doesn't use home-section-container for full-width image half */}
+          <div className="lifestyle-section-grid">
+            <img
+              src="/images/img_rectangle_9.png"
+              alt="Luxury Lifestyle"
+              className="lifestyle-image"
+            />
+            <div className="lifestyle-content">
+              <h2 className="lifestyle-heading">
+                No limits to the lifestyle you deserve.
+              </h2>
+              <p className="lifestyle-text">
+                Contact us and we will reply you back with personalized plan and quote.
+              </p>
+              <Button 
+                variant="primary" 
+                onClick={handleSendDesignIdea}
+                className="bg-[#faf7f0] text-[#2b2024] px-[19px] py-[10px] text-[18px] font-['Old_Standard_TT'] lifestyle-button"
+              >
+                Send Your Design Idea
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Instagram Section */}
+      <section className="home-section">
+        <div className="home-section-container">
+          <h2 className="home-section-heading-center">
+            Connect us on Instagram
+          </h2>
+          
+          {/* Instagram Gallery - Simplified for this example, complex layout requires careful grid span considerations */}
+          <div className="instagram-gallery-grid"> {/* Add 'complex-layout' class here if using that variant */}
+            <img
+              src="/images/img_rectangle_10.png"
+              alt="Instagram Post 1"
+              className="instagram-image-large first" // Add 'first' if using complex-layout
+              onClick={handleInstagramClick}
+            />
+            <div className="instagram-image-small-container">
+              <img
+                src="/images/img_rectangle_39.png"
+                alt="Instagram Post 2"
+                className="instagram-image-small"
+                onClick={handleInstagramClick}
+              />
+              <img
+                src="/images/img_rectangle_40.png"
+                alt="Instagram Post 3"
+                className="instagram-image-small"
+                onClick={handleInstagramClick}
+              />
+            </div>
+            <img
+              src="/images/img_rectangle_42.png"
+              alt="Instagram Post 4"
+              className="instagram-image-large second" // Add 'second' if using complex-layout
+              onClick={handleInstagramClick}
+            />
+            {/* For a true 4-column desktop layout, you'd add one more item or adjust col-spans */}
+          </div>
+
+          <div className="instagram-button-container">
+            <Button 
+              variant="secondary" 
+              onClick={handleInstagramClick}
+              className="px-[37px] py-[10px] text-[18px] font-['Old_Standard_TT']"
+            >
+              Instagram
+            </Button>
+          </div>
+
+          <div className="instagram-social-icons-container">
+            <img 
+              src="/images/img_twitter_1.png" 
+              alt="Twitter" 
+              className="instagram-social-icon"
+              onClick={() => window.open('https://twitter.com', '_blank')}
+            />
+            <img 
+              src="/images/img_facebook_1.png" 
+              alt="Facebook" 
+              className="instagram-social-icon"
+              onClick={() => window.open('https://facebook.com', '_blank')}
+            />
+            <img 
+              src="/images/img_instagram_1.png" 
+              alt="Instagram" 
+              className="instagram-social-icon"
+              onClick={handleInstagramClick}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="home-section">
+        <div className="home-section-container">
+          <div className="home-about-grid">
+            <div className="home-about-content">
+              <h2 className="home-section-heading">About us</h2>
+              <div className="home-about-text-group">
+                <p className="home-about-text">
+                  At NaamNYC, we work with high-end designers (both new and established), retail stores, and also private clients looking for that perfect custom piece or engagement ring.
+                </p>
+                <p className="home-about-text">
+                  Our studio combines over 20 years of experience with a modern focus on 3d printing technology. While we specialize in custom design and digital modeling, we are also a respected high-end jewelry manufacturer.
+                </p>
+                <p className="home-about-text">
+                  Our expert team of jewelers and designers will take your custom design idea all the way from concept to reality.
+                </p>
+              </div>
+              <Button 
+                variant="secondary" 
+                onClick={handleContactUs}
+                className="px-[35px] py-[8px] text-[18px] font-['Old_Standard_TT'] home-about-button"
+              >
+                Contact us
+              </Button>
+            </div>
+            <div className="home-about-image-container">
+              <img
+                src="/images/img_youngblondewomanpearlnecklacewhitevnecktopsmileswidelywithclosedeyestakesselfieoutside_1.png"
+                alt="About Us - Happy Customer"
+                className="home-about-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+
+      {showDesignModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h3 className="modal-heading">Send Your Design Idea</h3>
+            <p className="modal-text">
+              We would love to hear about your custom jewelry ideas. Please share your vision with us!
+            </p>
+            <div className="modal-actions">
+              <Button 
+                variant="primary" 
+                className="button-primary" // Assuming Button component has variants that make it full width if needed
+                onClick={() => {
+                  alert('Thank you! We will contact you soon to discuss your design idea.');
+                  setShowDesignModal(false);
+                }}
+              >
+                Send Message
+              </Button>
+              <Button 
+                variant="outline" 
+                className="button-outline"
+                onClick={() => setShowDesignModal(false)}
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default HomePage;
+</file>
+
+<file path="src/pages/jewelry-design-studio-homepage/components/AboutSection.jsx">
+// src/pages/jewelry-design-studio-homepage/components/AboutSection.jsx
+import React from 'react';
+import Button from '../../../components/ui/Button';
+
+const AboutSection = () => {
+  const achievements = [
+    { number: "20+", label: "Years of Excellence" },
+    { number: "5000+", label: "Happy Customers" },
+    { number: "10000+", label: "Pieces Crafted" },
+    { number: "50+", label: "Design Awards" }
+  ];
+
+  return (
+    <section className="py-20 bg-secondary-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-5xl font-normal leading-tight text-secondary-foreground font-old-standard mb-6">
+                Crafting Dreams Into Reality
+              </h2>
+              <p className="text-xl font-normal leading-relaxed text-secondary-foreground text-opacity-90 font-old-standard mb-6">
+                For over two decades, our master jewelers have been creating exceptional pieces that celebrate life's most precious moments. Each creation is a testament to our commitment to excellence and artistry.
+              </p>
+              <p className="text-lg font-normal leading-relaxed text-secondary-foreground text-opacity-80 font-old-standard">
+                From traditional techniques passed down through generations to cutting-edge 3D design technology, we blend the best of both worlds to create jewelry that transcends time.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-8">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-primary-background font-old-standard mb-2">
+                    {achievement.number}
+                  </div>
+                  <div className="text-base font-normal text-secondary-foreground text-opacity-80 font-old-standard">
+                    {achievement.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <Button 
+              variant="primary" 
+              className="bg-primary-background text-primary-foreground px-10 py-4 text-lg font-old-standard jewelry-hover"
+            >
+              Discover Our Story
+            </Button>
+          </div>
+
+          <div className="relative">
+            <div className="relative z-10">
+              <img
+                src="/images/img_youngblondewomanpearlnecklacewhitevnecktopsmileswidelywithclosedeyestakesselfieoutside_1.png"
+                alt="Master Jeweler at Work"
+                className="w-full h-96 lg:h-[600px] object-cover rounded-lg jewelry-shadow"
+              />
+            </div>
+            <div className="absolute top-8 left-8 w-full h-full border-2 border-primary-background rounded-lg -z-10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
+</file>
+
+<file path="src/pages/jewelry-design-studio-homepage/components/ContactSection.jsx">
+// src/pages/jewelry-design-studio-homepage/components/ContactSection.jsx
+import React, { useState } from 'react';
+import Button from '../../../components/ui/Button';
+
+const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Thank you for your inquiry! We will contact you within 24 hours.');
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
+  };
+
+  const contactInfo = [
+    {
+      icon: "/images/img_phone.svg",
+      label: "Phone",
+      value: "+91 9769826799",
+      action: "tel:+15551234567"
+    },
+    {
+      icon: "/images/img_message.svg",
+      label: "Email",
+      value: "info@jewelrydesignstudio.com",
+      action: "mailto:info@jewelrydesignstudio.com"
+    },
+    {
+      icon: "/images/img_vector_1.svg",
+      label: "Address",
+      value: "123 Jewelry Avenue, New York, NY 10001",
+      action: "#"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-accent">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-normal leading-tight text-accent-foreground font-old-standard mb-6">
+            Start Your Jewelry Journey
+          </h2>
+          <p className="text-xl font-normal leading-relaxed text-accent-foreground text-opacity-90 font-old-standard max-w-3xl mx-auto">
+            Ready to create something extraordinary? Get in touch with our team to discuss your vision and begin crafting your perfect piece.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <h3 className="text-3xl font-bold text-accent-foreground font-old-standard mb-8">
+              Get In Touch
+            </h3>
+            
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <a
+                  key={index}
+                  href={info.action}
+                  className="flex items-center space-x-4 p-4 bg-accent-foreground bg-opacity-10 rounded-lg jewelry-hover group"
+                >
+                  <img
+                    src={info.icon}
+                    alt={info.label}
+                    className="w-6 h-6 text-accent-foreground"
+                  />
+                  <div>
+                    <p className="text-base font-normal text-accent-foreground text-opacity-80 font-old-standard">
+                      {info.label}
+                    </p>
+                    <p className="text-lg font-normal text-accent-foreground font-old-standard group-hover:text-primary-background transition-colors">
+                      {info.value}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            <div className="pt-8">
+              <h4 className="text-xl font-bold text-accent-foreground font-old-standard mb-4">
+                Studio Hours
+              </h4>
+              <div className="space-y-2 text-accent-foreground text-opacity-90 font-old-standard">
+                <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+                <p>Saturday: 10:00 AM - 6:00 PM</p>
+                <p>Sunday: 12:00 PM - 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-accent-foreground p-8 rounded-lg jewelry-shadow">
+            <h3 className="text-3xl font-bold text-neutral-dark font-old-standard mb-8">
+              Send Us a Message
+            </h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-base font-normal text-neutral-dark font-old-standard mb-2">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-background focus:ring-2 focus:outline-none font-old-standard"
+                    placeholder="Full name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-base font-normal text-neutral-dark font-old-standard mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-background focus:ring-2 focus:outline-none font-old-standard"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-base font-normal text-neutral-dark font-old-standard mb-2">
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-background focus:ring-2 focus:outline-none font-old-standard"
+                    placeholder="+91 9769826799"
+                  />
+                </div>
+                <div>
+                  <label className="block text-base font-normal text-neutral-dark font-old-standard mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-background focus:ring-2 focus:outline-none font-old-standard"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="custom-design">Custom Jewelry Design</option>
+                    <option value="engagement-ring">Engagement Ring</option>
+                    <option value="manufacturing">Jewelry Manufacturing</option>
+                    <option value="consultation">Design Consultation</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div>
+                <label className="block text-base font-normal text-neutral-dark font-old-standard mb-2">
+                  Message *
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  rows={5}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-background focus:ring-2 focus:outline-none font-old-standard resize-vertical"
+                  placeholder="Tell us about your jewelry vision or any questions you have..."
+                ></textarea>
+              </div>
+              
+              <Button 
+                type="submit"
+                variant="primary" 
+                className="w-full bg-primary-background text-primary-foreground py-4 text-lg font-old-standard jewelry-hover"
+              >
+                Send Message
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
+</file>
+
+<file path="src/pages/jewelry-design-studio-homepage/components/GallerySection.jsx">
+// src/pages/jewelry-design-studio-homepage/components/GallerySection.jsx
+import React from 'react';
+import Button from '../../../components/ui/Button';
+
+const GallerySection = () => {
+  const galleryImages = [
+    {
+      src: "/images/img_rectangle_10.png",
+      alt: "Elegant Diamond Ring",
+      category: "Rings"
+    },
+    {
+      src: "/images/img_rectangle_39.png",
+      alt: "Custom Gold Necklace",
+      category: "Necklaces"
+    },
+    {
+      src: "/images/img_rectangle_40.png",
+      alt: "Pearl Earrings",
+      category: "Earrings"
+    },
+    {
+      src: "/images/img_rectangle_42.png",
+      alt: "Vintage Bracelet",
+      category: "Bracelets"
+    },
+    {
+      src: "/images/img_rectangle_8.png",
+      alt: "Designer Watch",
+      category: "Watches"
+    },
+    {
+      src: "/images/img_rectangle_41.png",
+      alt: "Custom Pendant",
+      category: "Pendants"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-neutral-light">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-normal leading-tight text-neutral-dark font-old-standard mb-6">
+            Our Exquisite Collection
+          </h2>
+          <p className="text-xl font-normal leading-relaxed text-neutral-dark text-opacity-70 font-old-standard max-w-3xl mx-auto">
+            Explore our stunning portfolio of handcrafted jewelry pieces, each telling a unique story of elegance and sophistication.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {galleryImages.map((image, index) => (
+            <div key={index} className="group relative overflow-hidden rounded-lg jewelry-shadow jewelry-hover">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end">
+                <div className="w-full p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-xl font-bold text-white font-old-standard mb-2">
+                    {image.alt}
+                  </h3>
+                  <p className="text-base font-normal text-white text-opacity-90 font-old-standard">
+                    {image.category}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button 
+            variant="primary" 
+            className="bg-primary-background text-primary-foreground px-12 py-4 text-lg font-old-standard jewelry-hover"
+          >
+            View Full Gallery
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GallerySection;
+</file>
+
+<file path="src/pages/jewelry-design-studio-homepage/components/ServicesSection.jsx">
+// src/pages/jewelry-design-studio-homepage/components/ServicesSection.jsx
+import React from 'react';
+import Button from '../../../components/ui/Button';
+
+const ServicesSection = () => {
+  const services = [
+    {
+      title: "Custom Jewelry Design",
+      description: "Transform your vision into reality with our bespoke jewelry design service. Our master craftsmen work with you to create unique pieces that reflect your personal style and story.",
+      image: "/images/img_pexelsthegloriousstudio7541807.png",
+      features: ["3D Design Preview", "Premium Materials", "Lifetime Warranty"]
+    },
+    {
+      title: "Engagement Ring Creation",
+      description: "Celebrate your love with a one-of-a-kind engagement ring. From classic solitaires to intricate vintage designs, we craft rings that symbolize your unique love story.",
+      image: "/images/img_pexelssaystraight2735970_435x574.png",
+      features: ["Diamond Selection", "Custom Settings", "Resizing Service"]
+    },
+    {
+      title: "Jewelry Manufacturing",
+      description: "Professional jewelry manufacturing services for designers and retailers. We combine traditional craftsmanship with modern techniques to deliver exceptional quality pieces.",
+      image: "/images/img_rectangle_7.png",
+      features: ["Bulk Production", "Quality Control", "Fast Delivery"]
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-neutral-cream">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-normal leading-tight text-neutral-dark font-old-standard mb-6">
+            Our Premium Services
+          </h2>
+          <p className="text-xl font-normal leading-relaxed text-neutral-dark text-opacity-70 font-old-standard max-w-3xl mx-auto">
+            Discover our comprehensive range of jewelry services, from custom design to manufacturing, all crafted with precision and passion.
+          </p>
+        </div>
+
+        <div className="space-y-24">
+          {services.map((service, index) => (
+            <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
+              index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+            }`}>
+              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-96 lg:h-[500px] object-cover rounded-lg jewelry-shadow"
+                />
+              </div>
+              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <h3 className="text-4xl font-bold leading-tight text-neutral-dark font-old-standard">
+                  {service.title}
+                </h3>
+                <p className="text-xl font-normal leading-relaxed text-neutral-dark text-opacity-75 font-old-standard">
+                  {service.description}
+                </p>
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-primary-background rounded-full"></div>
+                      <span className="text-lg font-normal text-neutral-dark font-old-standard">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <Button 
+                  variant="secondary" 
+                  className="px-8 py-3 text-lg font-old-standard jewelry-hover"
+                >
+                  Learn More
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
+</file>
+
+<file path="src/pages/jewelry-design-studio-homepage/components/TestimonialsSection.jsx">
+// src/pages/jewelry-design-studio-homepage/components/TestimonialsSection.jsx
+import React from 'react';
+
+const TestimonialsSection = () => {
+  const testimonials = [
+    {
+      name: "Sarah Mitchell",
+      role: "Bride",
+      content: "The engagement ring they created exceeded all my expectations. Every detail was perfect, and the craftsmanship is absolutely stunning. It\'s everything I dreamed of and more.",
+      image: "/images/img_young_brunette_wearswhite_sweater_straw_hat_fashionableaccessorieslooksasidepositivelysmilesagains.png",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Collector",
+      content: "I\'ve been collecting fine jewelry for years, and the pieces from this studio are among the finest I own. The attention to detail and quality is unmatched.",
+      image: "/images/img_pexelsww2799862.png",
+      rating: 5
+    },
+    {
+      name: "Emma Thompson",
+      role: "Fashion Designer",
+      content: "Working with this team on custom pieces for my fashion shows has been incredible. They understand my vision and bring it to life with such precision and artistry.",
+      image: "/images/img_pexelsfotosbykelly19772974_1.png",
+      rating: 5
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-neutral-cream">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-normal leading-tight text-neutral-dark font-old-standard mb-6">
+            What Our Clients Say
+          </h2>
+          <p className="text-xl font-normal leading-relaxed text-neutral-dark text-opacity-70 font-old-standard max-w-3xl mx-auto">
+            Discover why our clients trust us with their most precious moments and celebrate their testimonials of excellence.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white p-8 rounded-lg jewelry-shadow jewelry-hover">
+              <div className="flex items-center space-x-1 mb-6">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <div key={i} className="w-5 h-5 text-primary-background">
+                    ★
+                  </div>
+                ))}
+              </div>
+              
+              <p className="text-lg font-normal leading-relaxed text-neutral-dark text-opacity-80 font-old-standard mb-6 italic">
+                "{testimonial.content}"
+              </p>
+              
+              <div className="flex items-center space-x-4">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 className="text-lg font-bold text-neutral-dark font-old-standard">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-base font-normal text-neutral-dark text-opacity-60 font-old-standard">
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TestimonialsSection;
+</file>
+
+<file path="src/pages/jewelry-design-studio-homepage/index.jsx">
+// src/pages/jewelry-design-studio-homepage/index.jsx
+import React from 'react';
+import Header from '../../components/common/Header';
+import Footer from '../../components/common/Footer';
+import HeroSection from '../../components/common/HeroSection';
+import ServicesSection from './components/ServicesSection';
+import GallerySection from './components/GallerySection';
+import AboutSection from './components/AboutSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import ContactSection from './components/ContactSection';
+
+const JewelryDesignStudioHomepage = () => {
+  return (
+    <div className="min-h-screen bg-neutral-cream">
+      <Header />
+      <HeroSection />
+      <ServicesSection />
+      <GallerySection />
+      <AboutSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <Footer />
+    </div>
+  );
+};
+
+export default JewelryDesignStudioHomepage;
+</file>
+
+<file path="src/pages/ProductDetail/index.jsx">
+export { ProductDetail } from "./ProductDetail";
+</file>
+
+<file path="src/pages/ProductDetail/ProductDetail.jsx">
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import Button from "../../components/ui/button";
+import Header from "../../components/common/Header";
+
+const products = [
+  {
+    id: 1,
+    name: "Diamond Engagement Ring",
+    price: "$2,999",
+    image: "https://images.pexels.com/photos/1457801/pexels-photo-1457801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "1.5 carat diamond set in 18k white gold",
+    details: [
+      "Center Stone: 1.5 carat round brilliant diamond",
+      "Setting: 18k white gold",
+      "Clarity: VS1",
+      "Color: F",
+      "Cut: Excellent"
+    ]
+  },
+  {
+    id: 2,
+    name: "Pearl Necklace",
+    price: "$899",
+    image: "https://images.pexels.com/photos/989967/pexels-photo-989967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Freshwater pearl strand with 14k gold clasp",
+    details: [
+      "Pearl Type: Freshwater cultured",
+      "Size: 7-8mm",
+      "Length: 18 inches",
+      "Clasp: 14k gold",
+      "Color: White with rose overtones"
+    ]
+  },
+  {
+    id: 3,
+    name: "Sapphire Earrings",
+    price: "$1,299",
+    image: "https://images.pexels.com/photos/12404353/pexels-photo-12404353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Blue sapphire and diamond drop earrings",
+    details: [
+      "Main Stone: Blue sapphire",
+      "Accent Stones: Round diamonds",
+      "Total Carat Weight: 2.5ct",
+      "Metal: 18k white gold",
+      "Length: 1.5 inches"
+    ]
+  },
+  {
+    id: 4,
+    name: "Gold Bracelet",
+    price: "$799",
+    image: "https://images.pexels.com/photos/10875710/pexels-photo-10875710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "18k gold chain bracelet with custom clasp",
+    details: [
+      "Metal: 18k yellow gold",
+      "Length: 7.5 inches",
+      "Width: 4mm",
+      "Weight: 12 grams",
+      "Clasp: Custom box clasp"
+    ]
+  }
+];
+
+export const ProductDetail = () => {
+  const { id } = useParams();
+  const product = products.find(p => p.id === Number(id));
+
+  if (!product) {
+    return (
+      <div className="min-h-screen bg-[#faf9f6] flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-[#2b2024] mb-4 font-['Old_Standard_TT']">
+            Product not found
+          </h1>
+          <Link to="/products">
+            <Button className="bg-[#d4af37] hover:bg-[#c19d2c]">
+              Return to Products
+            </Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-[#faf9f6] min-h-screen">
+      <Header showContactButton={false} />
+
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex items-center gap-2 text-[#2b2024bf] mb-8">
+          <Link to="/" className="hover:text-[#d4af37]">Home</Link>
+          <span>/</span>
+          <Link to="/products" className="hover:text-[#d4af37]">Products</Link>
+          <span>/</span>
+          <span className="text-[#d4af37]">{product.name}</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-[500px] object-cover rounded-lg shadow-lg"
+            />
+          </div>
+
+          <div>
+            <h1 className="text-4xl font-bold text-[#2b2024] mb-4 font-['Old_Standard_TT']">
+              {product.name}
+            </h1>
+            <p className="text-2xl text-[#d4af37] font-semibold mb-4 font-['Old_Standard_TT']">
+              {product.price}
+            </p>
+            <p className="text-[#2b2024bf] text-lg mb-8 font-['Heebo']">
+              {product.description}
+            </p>
+
+            <div className="mb-8">
+              <h2 className="text-2xl font-semibold text-[#2b2024] mb-4 font-['Old_Standard_TT']">
+                Product Details
+              </h2>
+              <ul className="space-y-2">
+                {product.details.map((detail, index) => (
+                  <li key={index} className="text-[#2b2024bf] font-['Heebo']">
+                    • {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <Button className="w-full bg-[#d4af37] text-[#1c1c1c] hover:bg-[#c19d2c] text-lg py-6 font-['Old_Standard_TT']">
+              Add to Cart
+            </Button>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+</file>
+
+<file path="src/pages/ProductListing/index.jsx">
+export { ProductListing } from "./ProductListing";
+</file>
+
+<file path="src/pages/ProductListing/ProductListing.jsx">
+import React from "react";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "../../components/ui/card";
+import Header from "../../components/common/Header";
+
+const products = [
+  {
+    id: 1,
+    name: "Diamond Engagement Ring",
+    price: "$2,999",
+    image: "https://images.pexels.com/photos/1457801/pexels-photo-1457801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "1.5 carat diamond set in 18k white gold"
+  },
+  {
+    id: 2,
+    name: "Pearl Necklace",
+    price: "$899",
+    image: "https://images.pexels.com/photos/989967/pexels-photo-989967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Freshwater pearl strand with 14k gold clasp"
+  },
+  {
+    id: 3,
+    name: "Sapphire Earrings",
+    price: "$1,299",
+    image: "https://images.pexels.com/photos/12404353/pexels-photo-12404353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Blue sapphire and diamond drop earrings"
+  },
+  {
+    id: 4,
+    name: "Gold Bracelet",
+    price: "$799",
+    image: "https://images.pexels.com/photos/10875710/pexels-photo-10875710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "18k gold chain bracelet with custom clasp"
+  }
+];
+
+export const ProductListing = () => {
+  return (
+    <div className="bg-[#faf9f6] min-h-screen">
+      <Header />
+
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-[#2b2024] mb-8 font-['Old_Standard_TT']">
+          Our Collection
+        </h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((product) => (
+            <Link key={product.id} to={`/products/${product.id}`}>
+              <Card className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-0">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <h2 className="text-xl font-semibold text-[#2b2024] font-['Old_Standard_TT']">
+                      {product.name}
+                    </h2>
+                    <p className="text-[#2b2024bf] mt-2 font-['Heebo']">
+                      {product.description}
+                    </p>
+                    <p className="text-[#d4af37] font-semibold mt-2 font-['Old_Standard_TT']">
+                      {product.price}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+};
+</file>
+
+<file path="src/Routes.jsx">
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import page components
+import HomePage from './pages/Home';
+import JewelryDesignStudioHomepage from './pages/jewelry-design-studio-homepage';
+import { ProductListing } from './pages/ProductListing';
+import { ProductDetail } from './pages/ProductDetail';
+import Admin from './pages/Admin';
+
+const AppRoutes = () => {
+  return (
+    <Router>
+      <Routes>
+        {/* <Route path="/" element={<HomePage />} /> */}
+        <Route path="/" element={<JewelryDesignStudioHomepage />} />
+        <Route path="/home" element={<JewelryDesignStudioHomepage />} />
+        <Route path="/products" element={<ProductListing/>} />
+        <Route path="/products/:id" element={<ProductDetail/>} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default AppRoutes;
+</file>
+
+<file path="src/styles/header.css">
+/* src/styles/header.css */
+
+/* Header container styles */
+.header-container {
+  @apply bg-[#faf7f0] h-auto md:h-[124px] w-full relative z-50; /* Ensure header is above content, h-auto for mobile */
+}
+
+/* Main content wrapper */
+.header-content {
+  @apply flex items-center justify-between px-6 md:px-[60px] py-4 md:py-[46px];
+}
+
+
+/* Logo section */
+.logo-container {
+  @apply flex items-center ;
+}
+
+.logo-image {
+  @apply w-[50px] h-10 md:w-[60px] md:h-[46px]; /* Adjusted logo size for mobile */
+}
+
+.logo-text {
+  @apply h-10; /* Adjusted logo size for mobile */
+}
+
+
+/* Desktop Navigation styles */
+.navigation-menu {
+  @apply hidden md:flex items-center space-x-[40px] lg:space-x-[70px];
+}
+
+.nav-link {
+  @apply text-[18px] font-normal leading-[23px] text-[#0b3c49] font-['Old_Standard_TT'] hover:text-[#d4af37] transition-colors;
+}
+
+/* Contact button styles */
+.contact-button-wrapper { /* Renamed to avoid conflict if contact-button is used elsewhere */
+  @apply bg-[#d4af37] h-[40px] md:h-[46px] w-auto px-4 md:px-0 md:w-[155px] flex items-center justify-center cursor-pointer;
+}
+
+.contact-button-text {
+  @apply text-[16px] md:text-[18px] font-normal leading-[23px] text-[#1c1c1c] font-['Old_Standard_TT'];
+}
+
+/* Mobile Menu Button (Hamburger) */
+.mobile-menu-button {
+  @apply md:hidden p-2 text-[#0b3c49] focus:outline-none;
+  /* Add more styling for the icon if it's not an SVG, e.g., background, border */
+}
+.mobile-menu-button svg { /* If using SVG icon */
+    @apply w-6 h-6;
+}
+
+
+/* Mobile Navigation Menu (Dropdown/Overlay) */
+.mobile-nav-menu {
+  @apply absolute top-full left-0 right-0 bg-[#faf7f0] shadow-lg md:hidden flex flex-col items-center space-y-3 py-4;
+  /* top-full assumes the header height is fixed, or adjust based on dynamic height */
+}
+
+.mobile-nav-link {
+  @apply text-[18px] font-normal leading-[23px] text-[#0b3c49] font-['Old_Standard_TT'] hover:text-[#d4af37] transition-colors py-2 px-4 w-full text-center;
+}
+</file>
+
+<file path="src/styles/index.css">
+@import './tailwind.css';
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Old Standard TT', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+</file>
+
+<file path="src/styles/tailwind.css">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #d4af37;
+    --primary-foreground: #1c1c1c;
+    --primary-light: #e6c55a;
+    --primary-dark: #b68341;
+
+    /* Secondary Colors */
+    --secondary-background: #523c1e;
+    --secondary-foreground: #faf7f0;
+    --secondary-light: #6b4f28;
+    --secondary-dark: #3d2d17;
+
+    /* Accent Colors */
+    --accent-color: #0b3c49;
+    --accent-foreground: #ffffff;
+    --accent-light: #2d5a6b;
+    --accent-dark: #082a33;
+
+    /* Neutral Colors */
+    --neutral-background: #faf9f6;
+    --neutral-foreground: #2b2024;
+    --neutral-light: #faf7f0;
+    --neutral-dark: #2b2024;
+
+    /* Border Colors */
+    --border-primary: #b68341;
+    --border-secondary: #0b3c49;
+    --border-light: #e0e0e0;
+    --border-dark: #666666;
+  }
+}
+
+@layer utilities {
+  /* Background Color Utilities */
+  .bg-primary-gold {
+    background-color: var(--primary-background);
+  }
+
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+
+  .bg-primary-dark {
+    background-color: var(--primary-dark);
+  }
+
+  .bg-secondary-brown {
+    background-color: var(--secondary-background);
+  }
+
+  .bg-secondary-light {
+    background-color: var(--secondary-light);
+  }
+
+  .bg-secondary-dark {
+    background-color: var(--secondary-dark);
+  }
+
+  .bg-accent-teal {
+    background-color: var(--accent-color);
+  }
+
+  .bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
+  .bg-accent-dark {
+    background-color: var(--accent-dark);
+  }
+
+  .bg-neutral-cream {
+    background-color: var(--neutral-background);
+  }
+
+  .bg-neutral-light {
+    background-color: var(--neutral-light);
+  }
+
+  .bg-neutral-dark {
+    background-color: var(--neutral-dark);
+  }
+
+  /* Text Color Utilities */
+  .text-primary-dark {
+    color: var(--primary-foreground);
+  }
+
+  .text-secondary-cream {
+    color: var(--secondary-foreground);
+  }
+
+  .text-accent-white {
+    color: var(--accent-foreground);
+  }
+
+  .text-neutral-dark {
+    color: var(--neutral-foreground);
+  }
+
+  /* Border Color Utilities */
+  .border-primary-gold {
+    border-color: var(--border-primary);
+  }
+
+  .border-secondary-teal {
+    border-color: var(--border-secondary);
+  }
+
+  .border-light {
+    border-color: var(--border-light);
+  }
+
+  .border-dark {
+    border-color: var(--border-dark);
+  }
+
+  /* Custom Jewelry Design Utilities */
+  .jewelry-shadow {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .jewelry-hover {
+    transition: all 0.3s ease;
+  }
+
+  .jewelry-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+</file>
+
+<file path="tailwind.config.js">
+module.exports = {
+  content: ["./src/**/*.{js,ts,jsx,tsx,html,mdx}"],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          background: "#d4af37",
+          foreground: "#1c1c1c",
+          light: "#e6c55a",
+          dark: "#b68341",
+        },
+        secondary: {
+          background: "#523c1e",
+          foreground: "#faf7f0",
+          light: "#6b4f28",
+          dark: "#3d2d17",
+        },
+        accent: {
+          DEFAULT: "#0b3c49",
+          foreground: "#ffffff",
+          light: "#2d5a6b",
+          dark: "#082a33",
+        },
+        neutral: {
+          background: "#faf9f6",
+          foreground: "#2b2024",
+          light: "#faf7f0",
+          dark: "#2b2024",
+        },
+        border: {
+          primary: "#b68341",
+          secondary: "#0b3c49",
+          light: "#e0e0e0",
+          dark: "#666666",
+        },
+      },
+      fontFamily: {
+        'old-standard': ['Old Standard TT', 'serif'],
+        'heebo': ['Heebo', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'lato': ['Lato', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+};
+</file>
+
+<file path="vite.config.js">
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import tagger from "@dhiwise/component-tagger";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react(),tagger()],
+  build: {
+    outDir: "build",
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve('./src'),
+      '@components': path.resolve('./src/components'),
+      '@pages': path.resolve('./src/pages'),
+      '@assets': path.resolve('./src/assets'),
+      '@constants': path.resolve('./src/constants'),
+      '@styles': path.resolve('./src/styles'),
+    },
+  },
+  server: {
+    port: "4028",
+    host: "0.0.0.0",
+    strictPort: true,
+    allowedHosts: ['.amazonaws.com', '.builtwithrocket.new']
+  }
+});
+</file>
+
+</files>

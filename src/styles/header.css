@@ -1,0 +1,64 @@
+/* src/styles/header.css */
+
+/* Header container styles */
+.header-container {
+  @apply bg-[#faf7f0] h-auto md:h-[124px] w-full relative z-50; /* Ensure header is above content, h-auto for mobile */
+}
+
+/* Main content wrapper */
+.header-content {
+  @apply flex items-center justify-between px-6 md:px-[60px] py-4 md:py-[46px];
+}
+
+
+/* Logo section */
+.logo-container {
+  @apply flex items-center ;
+}
+
+.logo-image {
+  @apply w-[50px] h-10 md:w-[60px] md:h-[46px]; /* Adjusted logo size for mobile */
+}
+
+.logo-text {
+  @apply h-10; /* Adjusted logo size for mobile */
+}
+
+
+/* Desktop Navigation styles */
+.navigation-menu {
+  @apply hidden md:flex items-center space-x-[40px] lg:space-x-[70px];
+}
+
+.nav-link {
+  @apply text-[18px] font-normal leading-[23px] text-[#0b3c49] font-['Old_Standard_TT'] hover:text-[#d4af37] transition-colors;
+}
+
+/* Contact button styles */
+.contact-button-wrapper { /* Renamed to avoid conflict if contact-button is used elsewhere */
+  @apply bg-[#d4af37] h-[40px] md:h-[46px] w-auto px-4 md:px-0 md:w-[155px] flex items-center justify-center cursor-pointer;
+}
+
+.contact-button-text {
+  @apply text-[16px] md:text-[18px] font-normal leading-[23px] text-[#1c1c1c] font-['Old_Standard_TT'];
+}
+
+/* Mobile Menu Button (Hamburger) */
+.mobile-menu-button {
+  @apply md:hidden p-2 text-[#0b3c49] focus:outline-none;
+  /* Add more styling for the icon if it's not an SVG, e.g., background, border */
+}
+.mobile-menu-button svg { /* If using SVG icon */
+    @apply w-6 h-6;
+}
+
+
+/* Mobile Navigation Menu (Dropdown/Overlay) */
+.mobile-nav-menu {
+  @apply absolute top-full left-0 right-0 bg-[#faf7f0] shadow-lg md:hidden flex flex-col items-center space-y-3 py-4;
+  /* top-full assumes the header height is fixed, or adjust based on dynamic height */
+}
+
+.mobile-nav-link {
+  @apply text-[18px] font-normal leading-[23px] text-[#0b3c49] font-['Old_Standard_TT'] hover:text-[#d4af37] transition-colors py-2 px-4 w-full text-center;
+}

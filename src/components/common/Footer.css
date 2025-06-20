@@ -1,0 +1,60 @@
+/* src/components/common/Footer.css */
+.footer-main {
+    @apply bg-[#faf7f0] pt-10 md:pt-[60px] pb-8 md:pb-[40px];
+  }
+  
+  .footer-container {
+    @apply max-w-[1440px] mx-auto px-6 sm:px-10 md:px-[60px];
+  }
+  
+  .footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16 lg:gap-[100px] mb-10 md:mb-[40px];
+  }
+  
+  .footer-section {
+    @apply text-center md:text-center;
+  }
+  
+  .footer-heading {
+    @apply text-2xl md:text-[31px] font-bold leading-snug md:leading-[42px] text-[#2B3C48] font-['Playfair_Display'] mb-4 md:mb-[18px];
+  }
+  
+  .footer-text {
+    @apply text-base md:text-[18px] font-normal leading-relaxed md:leading-[30px] text-[#2b2024bf] font-heebo max-w-full md:max-w-[405px] mx-auto md:mx-0;
+  }
+  
+  .footer-links-container {
+    @apply space-y-4 md:space-y-[36px];
+  }
+  
+  .footer-link {
+    @apply block text-base md:text-[18px] font-normal leading-normal md:leading-[27px] text-[#2b2024] font-heebo hover:text-[#d4af37] transition-colors;
+  }
+  
+  .footer-support-items {
+    @apply space-y-6 md:space-y-[32px];
+  }
+  
+  .footer-support-item {
+    @apply flex items-center justify-center md:justify-center space-x-4 md:space-x-[29px];
+  }
+  
+  .footer-support-icon {
+    @apply w-[24px] h-[24px];
+  }
+  
+  .footer-support-text {
+    @apply text-base md:text-[18px] font-normal leading-normal md:leading-[27px] text-[#2b2024] font-heebo;
+  }
+  .footer-support-text-lato { /* For phone number specifically if needed */
+    @apply text-base md:text-[18px] font-normal leading-normal md:leading-[22px] text-[#2b2024] font-lato;
+  }
+  
+  
+  .footer-social-icons {
+    @apply flex items-center justify-center md:justify-center space-x-6 md:space-x-[40px];
+  }
+  
+  .footer-social-icon {
+    @apply w-[20px] h-[20px] cursor-pointer hover:opacity-80;
+  }

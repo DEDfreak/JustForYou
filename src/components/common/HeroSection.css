@@ -1,0 +1,86 @@
+/* src/components/common/HeroSection.css */
+.hero-section {
+    @apply bg-[#faf9f6] relative flex items-center py-16 md:py-0;
+    min-height: calc(100vh - 100px); /* Example: full viewport height minus header */
+  }
+  @screen md {
+    .hero-section {
+      @apply min-h-[800px];
+    }
+  }
+  
+  
+  .hero-container {
+    @apply max-w-[1440px] mx-auto w-full px-6 sm:px-10 md:px-[90px];
+  }
+  
+  .hero-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[100px] items-center;
+  }
+  
+  .hero-content-left {
+    @apply space-y-8 md:space-y-[40px] text-center lg:text-left;
+  }
+  
+  .hero-heading {
+    @apply text-4xl sm:text-5xl md:text-[64px] font-normal leading-tight md:leading-[76px] text-[#0b3c49] font-['Old_Standard_TT'] max-w-full lg:max-w-[555px] mx-auto lg:mx-0;
+  }
+  
+  .hero-actions {
+    @apply flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-[40px];
+  }
+  
+  .hero-contact-button {
+    /* Using Button component's own styling, additional wrapper styles if needed */
+    @apply w-full sm:w-auto;
+  }
+  
+  .hero-gallery-link {
+    @apply flex items-center space-x-[10px] cursor-pointer text-[#1c1c1c] hover:text-[#d4af37];
+  }
+  
+  .hero-gallery-text {
+    @apply text-[18px] font-normal leading-[23px] font-['Old_Standard_TT'];
+  }
+  
+  .hero-gallery-arrow {
+    @apply w-[20px] h-[16px];
+  }
+  
+  .hero-content-right {
+    @apply relative mt-10 lg:mt-0;
+    /* Ensure this container has some height on mobile if images are absolutely positioned within it, or let images define height */
+  }
+  @screen sm {
+      .hero-content-right {
+          min-height: 550px; /* Adjust based on image sizes */
+      }
+  }
+  
+  
+  .hero-image-main-wrapper {
+    @apply relative w-full max-w-[280px] sm:max-w-[351px] mx-auto lg:mx-0;
+  }
+  
+  .hero-image-main-border {
+    @apply absolute inset-0 border-2 border-[#b68341] rounded-[0px_100px_100px_0px] sm:rounded-[0px_176px_176px_0px] z-10;
+  }
+  
+  .hero-image-main {
+    @apply w-full h-[400px] sm:h-[536px] object-cover rounded-[0px_0px_100px_0px] sm:rounded-[0px_0px_175px_0px] relative z-20;
+  }
+  
+  .hero-image-secondary {
+    @apply absolute top-[150px] sm:top-[219px] w-[180px] sm:w-[233px] h-[250px] sm:h-[319px] object-cover rounded-[0px_80px_0px_0px] sm:rounded-[0px_116px_0px_0px] z-30;
+    right: 0; /* Default for mobile */
+  }
+  @screen sm {
+    .hero-image-secondary {
+      right: -20px; /* Slightly offset on small screens */
+    }
+  }
+  @screen lg {
+    .hero-image-secondary {
+      right: -76px; /* Original offset for large screens */
+    }
+  }

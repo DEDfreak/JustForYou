@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #d4af37;
+    --primary-foreground: #1c1c1c;
+    --primary-light: #e6c55a;
+    --primary-dark: #b68341;
+
+    /* Secondary Colors */
+    --secondary-background: #523c1e;
+    --secondary-foreground: #faf7f0;
+    --secondary-light: #6b4f28;
+    --secondary-dark: #3d2d17;
+
+    /* Accent Colors */
+    --accent-color: #0b3c49;
+    --accent-foreground: #ffffff;
+    --accent-light: #2d5a6b;
+    --accent-dark: #082a33;
+
+    /* Neutral Colors */
+    --neutral-background: #faf9f6;
+    --neutral-foreground: #2b2024;
+    --neutral-light: #faf7f0;
+    --neutral-dark: #2b2024;
+
+    /* Border Colors */
+    --border-primary: #b68341;
+    --border-secondary: #0b3c49;
+    --border-light: #e0e0e0;
+    --border-dark: #666666;
+  }
+}
+
+@layer utilities {
+  /* Background Color Utilities */
+  .bg-primary-gold {
+    background-color: var(--primary-background);
+  }
+
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+
+  .bg-primary-dark {
+    background-color: var(--primary-dark);
+  }
+
+  .bg-secondary-brown {
+    background-color: var(--secondary-background);
+  }
+
+  .bg-secondary-light {
+    background-color: var(--secondary-light);
+  }
+
+  .bg-secondary-dark {
+    background-color: var(--secondary-dark);
+  }
+
+  .bg-accent-teal {
+    background-color: var(--accent-color);
+  }
+
+  .bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
+  .bg-accent-dark {
+    background-color: var(--accent-dark);
+  }
+
+  .bg-neutral-cream {
+    background-color: var(--neutral-background);
+  }
+
+  .bg-neutral-light {
+    background-color: var(--neutral-light);
+  }
+
+  .bg-neutral-dark {
+    background-color: var(--neutral-dark);
+  }
+
+  /* Text Color Utilities */
+  .text-primary-dark {
+    color: var(--primary-foreground);
+  }
+
+  .text-secondary-cream {
+    color: var(--secondary-foreground);
+  }
+
+  .text-accent-white {
+    color: var(--accent-foreground);
+  }
+
+  .text-neutral-dark {
+    color: var(--neutral-foreground);
+  }
+
+  /* Border Color Utilities */
+  .border-primary-gold {
+    border-color: var(--border-primary);
+  }
+
+  .border-secondary-teal {
+    border-color: var(--border-secondary);
+  }
+
+  .border-light {
+    border-color: var(--border-light);
+  }
+
+  .border-dark {
+    border-color: var(--border-dark);
+  }
+
+  /* Custom Jewelry Design Utilities */
+  .jewelry-shadow {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .jewelry-hover {
+    transition: all 0.3s ease;
+  }
+
+  .jewelry-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+}

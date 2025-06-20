@@ -1,0 +1,171 @@
+/* src/pages/Home/HomePage.css */
+
+.home-page-container {
+    @apply min-h-screen bg-[#faf9f6];
+  }
+  
+  /* Generic Section Styling */
+  .home-section {
+    @apply py-12 md:py-[80px];
+  }
+  .home-section-dark-bg {
+    @apply bg-[#2b2024] relative; /* For lifestyle section */
+  }
+  
+  
+  .home-section-container {
+    @apply max-w-[1440px] mx-auto px-6 sm:px-10 md:px-[90px];
+  }
+  
+  .home-section-heading {
+    @apply text-3xl sm:text-4xl md:text-[50px] font-normal leading-tight md:leading-[62px] text-[#2b2024] font-['Old_Standard_TT'] mb-10 md:mb-[80px] text-center md:text-left;
+  }
+  .home-section-heading-center {
+    @apply text-3xl sm:text-4xl md:text-[50px] font-normal leading-tight md:leading-[61px] text-center text-[#2b2024] font-['Old_Standard_TT'] mb-10 md:mb-[60px] max-w-xs sm:max-w-sm md:max-w-[345px] mx-auto;
+  }
+  
+  
+  /* Service Item (applies to Custom Jewelry, Engagement Ring, etc.) */
+  .service-item-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[90px] items-center mb-16 md:mb-[120px];
+  }
+  /* For alternating image/text order */
+  .service-item-grid-reversed .service-image-container {
+      @apply md:order-2;
+  }
+  .service-item-grid-reversed .service-content-container {
+      @apply md:order-1;
+  }
+  
+  .service-image-container {
+    @apply bg-[#c4c4c4] w-full h-[300px] sm:h-[380px] md:h-[438px]; /* Responsive height */
+  }
+  .service-image {
+    @apply w-full h-full object-cover;
+  }
+  
+  .service-content-container {
+    @apply space-y-6 md:space-y-[30px] text-center md:text-left;
+  }
+  
+  .service-title {
+    @apply text-2xl sm:text-3xl md:text-[42px] font-bold leading-tight md:leading-[52px] text-[#2b2024] font-['Old_Standard_TT'];
+  }
+  
+  .service-description {
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[36px] text-[#2b202499] font-heebo max-w-full md:max-w-[597px] mx-auto md:mx-0;
+  }
+  .service-description-alt { /* For engagement ring text */
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[36px] text-[#2b202499] font-heebo max-w-full md:max-w-[634px] mx-auto md:mx-0;
+  }
+  
+  
+  .service-button {
+    /* Button component styles itself, this class is for positioning if needed */
+    @apply mx-auto md:mx-0 block md:inline-block;
+  }
+  
+  
+  /* Lifestyle Section */
+  .lifestyle-section-grid {
+    @apply grid grid-cols-1 md:grid-cols-2;
+  }
+  .lifestyle-image {
+    @apply w-full md:w-[601px] h-[300px] md:h-[483px] object-cover;
+  }
+  .lifestyle-content {
+    @apply px-6 py-10 md:px-[90px] md:py-[77px] space-y-6 md:space-y-[30px] text-center md:text-left;
+  }
+  .lifestyle-heading {
+    @apply text-3xl sm:text-4xl md:text-[44px] font-bold leading-tight md:leading-[54px] text-[#faf7f0] font-['Old_Standard_TT'] max-w-full md:max-w-[455px] mx-auto md:mx-0;
+  }
+  .lifestyle-text {
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[35px] text-[#faf7f0b2] font-heebo max-w-full md:max-w-[427px] mx-auto md:mx-0;
+  }
+  .lifestyle-button {
+    @apply mx-auto md:mx-0 block md:inline-block;
+  }
+  
+  /* Instagram Section */
+  .instagram-gallery-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[42px] mb-10 md:mb-[60px]; /* Simplified for mobile */
+  }
+  .instagram-image-large {
+    @apply w-full h-auto sm:h-[400px] md:h-[450px] object-cover cursor-pointer hover:opacity-80 transition-opacity;
+    @apply lg:col-span-1; /* Default for one column, can be overridden if it's a 2-col layout with one larger */
+  }
+  .instagram-image-small-container { /* Container for the two smaller images */
+    @apply space-y-3 sm:space-y-[11px];
+  }
+  .instagram-image-small {
+    @apply w-full h-auto max-h-[220px] object-cover cursor-pointer hover:opacity-80 transition-opacity;
+  }
+  /* For the 4-column desktop layout, you might need more specific classes or adjust the grid definition */
+  /* This simplified example assumes the two small images stack in one of the grid cells on sm+ */
+  /* If you want the original 1-2small-1 layout on large screens, it's more complex with grid column spans */
+  .instagram-gallery-grid.complex-layout {
+      @apply lg:grid-cols-4; /* Example if you want a 4-col layout for desktop */
+  }
+  .instagram-gallery-grid.complex-layout .instagram-image-large.first {
+      @apply lg:col-span-1; /* Or lg:col-span-2 if it was wider */
+  }
+  .instagram-gallery-grid.complex-layout .instagram-image-small-container {
+      @apply lg:col-span-1;
+  }
+  .instagram-gallery-grid.complex-layout .instagram-image-large.second {
+      @apply lg:col-span-1; /* Or lg:col-span-2 */
+  }
+  
+  
+  .instagram-button-container {
+    @apply text-center;
+  }
+  .instagram-social-icons-container {
+    @apply flex justify-center space-x-6 md:space-x-[40px] mt-8 md:mt-[40px];
+  }
+  .instagram-social-icon {
+    @apply w-[20px] h-[20px] cursor-pointer hover:opacity-80;
+  }
+  
+  /* About Us Section on Home Page */
+  .home-about-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[90px] items-start;
+  }
+  .home-about-content {
+    @apply space-y-8 md:space-y-[40px] text-center md:text-left;
+  }
+  .home-about-text-group {
+    @apply space-y-6 md:space-y-[30px];
+  }
+  .home-about-text {
+    @apply text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed md:leading-[35px] text-[#2b2024bf] font-heebo max-w-full md:max-w-[530px] mx-auto md:mx-0;
+  }
+  .home-about-image-container {
+    @apply bg-[#c4c4c4] w-full h-[400px] sm:h-[500px] md:h-[618px]; /* Responsive height */
+  }
+  .home-about-image {
+    @apply w-full h-full object-cover;
+  }
+  .home-about-button {
+    @apply mx-auto md:mx-0 block md:inline-block;
+  }
+  
+  /* Modal Styling */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4;
+  }
+  .modal-content {
+    @apply bg-white p-6 md:p-8 rounded-lg max-w-md w-full mx-auto;
+  }
+  .modal-heading {
+    @apply text-xl md:text-2xl font-bold mb-4 text-[#2b2024];
+  }
+  .modal-text {
+    @apply text-gray-600 mb-6 text-sm md:text-base;
+  }
+  .modal-actions {
+    @apply flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4;
+  }
+  .modal-actions .button-primary, .modal-actions .button-outline { /* Target Button component if its classes are known */
+      @apply w-full;
+  }
